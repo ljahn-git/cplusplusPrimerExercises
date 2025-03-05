@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Sales_item.h"
 
 int main() {
     //Exercise 1.1
@@ -154,4 +155,43 @@ int main() {
         first++;
     }
     */
+
+   //Exercise 1.20: Use Sales_item.h to write a program that reads a set of book sales transactions and prints them out
+   /*
+   std::cout << "\nExercise 1.20:" << std::endl;
+    Sales_item item1;
+    while (std::cin >> item1) {
+        std::cout << item1 << std::endl;
+    }
+    //std::cout << item1 << std::endl;
+    */
+
+   //Exercise 1.21: Write a program that reads two Sales_item objects that have the same ISBN and produces their sum.
+   /*
+   std::cout << "\nExercise 1.21:" << std::endl;
+   Sales_item item1, item2, sum;
+   std::cout << "Please enter two sale data groups with the same ISBN: ";
+   std::cin >> item1 >> item2;
+   if (item1.isbn() == item2.isbn()) {
+       sum = item1 + item2;
+       std::cout << sum << std::endl;
+   } else {
+        std::cout << "Inputted ISBNs did not match. Please try again!" << std::endl;
+   }
+   */
+
+  //Exercise 1.22: Write a program that reads several transactions for the same ISBN and writes their sum.
+   std::cout << "\nExercise 1.22:" << std::endl;
+   Sales_item item1, sum;
+   //int count = 0;
+   std::cout << "Please enter sale data groups with the same ISBN: ";
+   std::cin >> sum;
+   while (std::cin >> item1) {
+        sum = sum + item1;
+   }
+   std::cout << sum << std::endl;
+
+
+
+  return 0;
 }
