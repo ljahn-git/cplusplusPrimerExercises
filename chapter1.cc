@@ -181,6 +181,7 @@ int main() {
    */
 
   //Exercise 1.22: Write a program that reads several transactions for the same ISBN and writes their sum.
+   /*
    std::cout << "\nExercise 1.22:" << std::endl;
    Sales_item item1, sum;
    //int count = 0;
@@ -190,6 +191,51 @@ int main() {
         sum = sum + item1;
    }
    std::cout << sum << std::endl;
+   */
+
+  //Exercise 1.23 & 1.24: Write a program that reads several transactions and counts how many transactions occur for each ISBN
+  /*
+  std::cout << "\nExercise 1.23 & 1.24:" << std::endl;
+  Sales_item item1, item2;
+  int count = 1;
+  std::cin >> item1;
+  while (std::cin >> item2) {
+    if (item2.isbn() == item1.isbn()) {
+        count++;
+    }
+    else {
+        std::cout << item1.isbn() << " had " << count << " transactions." << std::endl;
+        count = 1;
+    }
+    item1 = item2;
+  }
+
+  std::cout << item1.isbn() << " had " << count << " transactions." << std::endl;
+  */
+
+ //Exercise 1.25: Compile the given program from the book
+ std::cout << "\nExercise 1.25:" << std::endl;
+ Sales_item total; //variable to hold data for the next transaction
+ //read the first transaction and ensure that there are data to process
+ if (std::cin >> total) {
+    Sales_item trans; //variable to hold the running sum
+    //read and process the remaining transactions
+    while (std::cin >> trans) {
+        //if we're still processing the same book
+        if (total.isbn() == trans.isbn()) {
+            total += trans; //update the running total
+        } else {
+            //prints results for the previous book
+            std::cout << total << std::endl;
+            total = trans; //total now refers to the next book
+        }
+    }
+    std::cout << total << std::endl;
+ } else {
+    //no input! warn the user
+    std::cerr << "No data?!" << std::endl;
+    return -1; //indicate failure
+ }
 
 
 
