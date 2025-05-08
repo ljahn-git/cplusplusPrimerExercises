@@ -5,6 +5,11 @@ void exercise21();
 void exercise22();
 void exercise23();
 void exercise25();
+void exercise26();
+void exercise27();
+void exercise28();
+void exercise29();
+void exercise210();
 
 int main() {
     bool finished = false;
@@ -15,6 +20,11 @@ int main() {
         cout << "2) Exercise 2.2" << endl;
         cout << "3) Exercise 2.3/4" << endl;
         cout << "4) Exercise 2.5" << endl;
+        cout << "5) Exercise 2.6" << endl;
+        cout << "6) Exercise 2.7" << endl;
+        cout << "7) Exercise 2.8" << endl;
+        cout << "8) Exercise 2.9" << endl;
+        cout << "9) Exercise 2.10" << endl;
         std::cout << "Press any other integer to quit." << std::endl;
 
         std::cin >> choice;
@@ -31,6 +41,21 @@ int main() {
             case 4:
                 exercise25();
                 break;
+            case 5:
+                exercise26();
+                break;
+            case 6:
+                exercise27();
+                break;
+            case 7:
+                exercise28();
+                break;
+            case 8:
+                exercise29();
+                break;
+            case 9:
+                exercise210();
+                break;    
             default:
                 finished = true;
                 break;
@@ -75,9 +100,45 @@ void exercise23() {
 
 //Exercise 2.5
 void exercise25() {
-    cout << "\n**EXERCISE 2.2**" << endl;
+    cout << "\n**EXERCISE 2.5**" << endl;
     cout << "char, wchar_t, string, wchar_t" << endl;
     cout << "int, unsigned int, long, unsigned long, octal int, hexadecimal int" << endl;
     cout << "double, float, long double" << endl;
     cout << "int, unsigned int, double, double" << endl;
+}
+
+//Exercise 2.6
+void exercise26() {
+    cout << "\n**EXERCISE 2.6**" << endl;
+    cout << "int month = 9, day = 7; stores the integers in decimal format." << endl;
+    cout << "int month = 09, day = 07; stores the integers in octal format." << endl;
+}
+
+//Exercise 2.7
+void exercise27() {
+    cout << "\n**EXERCISE 2.7**" << endl;
+    cout << "(a) = \"Who goes with Fergus?\\n\" and is a string, (b) = 31.4 and is a long double,"
+    "(c) = 1024 and is a float, and (d) = 3.14 and is a long double." << endl;
+}
+
+//Exercise 2.8
+void exercise28() {
+    cout << "\n**EXERCISE 2.8**" << endl;
+    cout << "\062\x4D" << endl;
+    cout << "\062\t\x4D\n" << endl;
+}
+
+//Exercise 2.9
+void exercise29() {
+    cout << "\n**EXERCISE 2.9**" << endl;
+    cout << "cin >> int input_value; is not allowed, as input_value must be declared first." << endl;
+    cout << "int i = {3.14}; is allowed." << endl;
+    cout << "double salary = wage = 9999.99; is not allowed as the syntax is incorrect. " 
+    "Correct syntax would be double salary, wage = 9999.99;."<< endl;
+    cout << "int i = 3.14 is allowed." << endl;
+}
+
+//Exercise 2.10
+void exercise210() {
+    cout << "global_int has a value of 0, global_string has a value of \"\", local_int is uninitialized, and local_str has a value of \"\"" << endl;
 }
